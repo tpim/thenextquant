@@ -80,6 +80,9 @@ python src/main.py config.json
     - [日志打印](docs/others/logger.md)
     - [定时任务](docs/others/tasks.md)
 
+- 学习课程
+    - [数字资产做市策略与实战](https://study.163.com/course/introduction/1209595888.htm?share=2&shareId=480000002173520)
+
 
 ### FAQ
 - [FAQ](docs/faq.md)
