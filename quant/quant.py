@@ -32,7 +32,6 @@ class Quant:
         self._get_event_loop()
         self._load_settings(config_module)
         self._init_logger()
-        self._init_event_center()
         self._do_heartbeat()
 
     def start(self):
@@ -76,13 +75,6 @@ class Quant:
             logger.initLogger(level)
         else:
             logger.initLogger(level, path, name, clear, backup_count)
-
-    def _init_event_center(self):
-        """Initialize event center."""
-        if config.rabbitmq:
-            from quant.event import EventCenter
-            self.event_center = EventCenter()
-            self.loop.run_until_complete(self.event_center.connect())
 
     def _do_heartbeat(self):
         """Start server heartbeat."""
